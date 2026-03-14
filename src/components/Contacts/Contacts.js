@@ -2,7 +2,6 @@ import React, { useContext, useState, useRef } from "react";
 import emailjs from "@emailjs/browser";
 import { Snackbar, IconButton, SnackbarContent } from "@material-ui/core";
 import CloseIcon from "@material-ui/icons/Close";
-import axios from "axios";
 import isEmail from "validator/lib/isEmail";
 import { makeStyles } from "@material-ui/core/styles";
 import { FaLinkedinIn, FaGithub, FaMediumM } from "react-icons/fa";
@@ -283,8 +282,7 @@ function Contacts() {
               </div>
               <p style={{ color: theme.tertiary }}>{contactsData.email}</p>
             </a>
-            <a
-              // href={`tel:${contactsData.phone}`}
+            <div
               className="personal-details"
             >
               <div className={classes.detailsIcon}>
@@ -293,7 +291,7 @@ function Contacts() {
               <p style={{ color: theme.tertiary }} id="contact-phone">
                 {contactsData.phone}
               </p>
-            </a>
+            </div>
             <div className="personal-details">
               <div className={classes.detailsIcon}>
                 <HiOutlineLocationMarker />

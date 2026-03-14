@@ -9,13 +9,10 @@ import { FaUser, FaFolderOpen } from "react-icons/fa";
 import { makeStyles } from "@material-ui/core/styles";
 import Drawer from "@material-ui/core/Drawer";
 import CloseIcon from "@material-ui/icons/Close";
-import { Box } from "@material-ui/core";
 import "./Navbar.css";
 import { headerData } from "../../data/headerData";
 import { ThemeContext } from "../../contexts/ThemeContext";
 import shadows from "@material-ui/core/styles/shadows";
-import resume from "../../assets/pdf/resume.pdf";
-import { Button } from "@material-ui/core";
 
 function Navbar() {
   //   console.log(shadows);
@@ -136,19 +133,6 @@ function Navbar() {
     } else {
       return name;
     }
-  };
-
-  const handleClick = () => {
-    window.open(
-      "https://drive.google.com/file/d/1uk9MQMNGk83W7Qu7DK13gSHmO32_CWCs/view?usp=share_link"
-    );
-    const url = resume;
-    const link = document.createElement("a");
-    link.href = url;
-    link.download = "file.pdf";
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
   };
 
   return (
